@@ -1,0 +1,19 @@
+---
+const { title, description, image, link } = Astro.props;
+---
+
+<div class="max-w-sm rounded-lg overflow-hidden shadow-lg bg-[#1f1f30] shadow-[#353552] transition-transform transform hover:-translate-y-2 hover:shadow-xl">
+  <img src={image} alt={`Image of ${title}`} class="w-full h-48 object-cover" />
+  <div class="p-4 bg-">
+    <h3 class="text-xl text-[#7c7cc1] font-semibold mb-2">{title}</h3>
+    <p class="text-white mb-4">{description}</p>
+    <a 
+      href={link} 
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="block text-center bg-[#30304a] text-white font-medium py-2 px-4 rounded hover:bg-[#28284b]"
+    >
+      Ver proyecto
+    </a>
+  </div>
+</div>

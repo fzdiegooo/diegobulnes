@@ -1,0 +1,41 @@
+---
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: 'Polleria El Pollon',
+    description: 'Sistema de e-commerce para un restaurante.',
+    image: 'elpollon.png',
+    link: 'https://mi-ecommerce.com',
+  },
+  {
+    title: 'Paraíso Florido',
+    description: 'Sistema para automatizar la asistencia de alumnos en un colegio',
+    image: 'paraisoflorido.png',
+    link: 'https://frontend-paraiso-florido.vercel.app/inicio',
+  },
+  {
+    title: 'GymGeniusTracks',
+    description: 'Software de venta de cursos fitness online',
+    image: 'gymgeniustracks.png',
+    link: 'https://fzdiegooo.github.io/GYMGENIUSTRACKS2/',
+  },
+  {
+    title: 'Pomodoro Timer',
+    description: 'Sistema para gestionar reservas y reducir filas en restaurantes.',
+    image: 'pomodorotimer.png',
+    link: 'https://fzdiegooo.github.io/pomodoro-timer/',
+  }
+];
+---
+
+<section class="py-10 max-w-screen-lg">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8 text-white">Mis Proyectos</h2>
+      <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {projects.map((project) => (
+          <ProjectCard {...project} />
+        ))}
+      </div>
+    </div>
+  </section>
